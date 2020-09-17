@@ -12,6 +12,7 @@ def calculate_price(price, cash_coupon, percent_coupon):
     with_cashcoupon = price - cash_coupon
     with_percentcoupon = with_cashcoupon - (with_cashcoupon * percent_coupon/100)
     subtotal_tax = with_percentcoupon * 1.06
+    shipping = 0
     if with_percentcoupon < 10:
         shipping = 5.95
     elif with_percentcoupon < 30:
@@ -20,8 +21,10 @@ def calculate_price(price, cash_coupon, percent_coupon):
         shipping = 11.95
     else:
         shipping = 0
+
     return subtotal_tax + shipping
 
 
 if __name__ == '__main__':
-    final_price = calculate_price(5.99, 5, 10)
+    final_price = calculate_price(64.99, 5, 10)
+    print (final_price)
