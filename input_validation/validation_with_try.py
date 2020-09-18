@@ -16,5 +16,15 @@ def average(score1, score2, score3):
 
 
 if __name__ == '__main__':
-    average_score = average(1, 1, 1)
-    print("Average score is {}".format(average_score))
+    lastName = input("Please enter your last name: ")
+    firstName = input("Please enter your first name: ")
+    age = input("Please enter your age: ")
+    first_score = input("Enter your first score: ")
+    second_score = input("Enter your second score: ")
+    third_score = input("Enter your third score: ")
+    try:
+        average_score = average(int(first_score), int(second_score), int(third_score))
+    except ValueError:
+        print ("Please enter only positive scores!")
+    else:
+        print("{}, {}, age: {}, Average score is {}".format(lastName, first_score, age, average_score))
