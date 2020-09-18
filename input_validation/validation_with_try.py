@@ -1,10 +1,9 @@
 """""
 Program: validation_with_try.py
 Author: Rajiv Malhotra
-Last Modified Date: 09/187/2020
+Last Modified Date: 09/18/2020
  
-The program will accept the amount of purchase, the cash coupon, the percentage coupon and it will calculate the total
-order price. 
+The program will do input validation and raise ValueError if any of the input scores are negative. 
 """""
 
 
